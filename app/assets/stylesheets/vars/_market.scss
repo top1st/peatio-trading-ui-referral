@@ -1,9 +1,50 @@
+///* peatio exchange site vars
+//-------------------------------------------------------------- */
+//
+//$gutter: 2px;
+//$min-width: 1180px;
+//$min-height: 620px;
+//
+//$navbar-height: $navbar-height + 1px;
+//$panel_table_header_high: 37px;
+//$gutter-2x: $gutter * 2;
+//$gutter-3x: $gutter * 3;
+//$gutter-4x: $gutter * 4;
+//$gutter-5x: $gutter * 5;
+//$gutter-6x: $gutter * 6;
+//
+//$entry-width: 340px;
+//$entry-height: 200px;
+//
+//$ticker-width: $entry-width * 2 + $gutter;
+//$ticker-height: 55px;
+//
+//$depths-width: $entry-width * 2 + $gutter;
+//$depths-height: 102px;
+//
+//$my-orders-width: $depths-width;
+//$my-orders-height: 92px;
+//
+//$order-book-width: $depths-width;
+//$order-book-height: $min-height - $navbar-height - $entry-height - $ticker-height - $depths-height - $my-orders-height - $gutter-6x;
+//
+//$market-list-width: 280px;
+//$market-list-height: $entry-height;
+//
+//$market-trades-width: $market-list-width;
+//$market-trades-height: $min-height - $navbar-height - $market-list-height - $gutter-3x;
+//
+//$candlestick-width: $min-width - $order-book-width - $market-list-width - $gutter-4x - 20;
+//$candlestick-height: $min-height - $navbar-height - $gutter-2x;
+
 /* peatio exchange site vars
 -------------------------------------------------------------- */
 
-$gutter: 2px;
+$cover-maring: 40px;
+
+$gutter: 10px;
 $min-width: 1180px;
-$min-height: 620px;
+$min-height: 780px;
 
 $navbar-height: $navbar-height + 1px;
 $panel_table_header_high: 37px;
@@ -13,8 +54,8 @@ $gutter-4x: $gutter * 4;
 $gutter-5x: $gutter * 5;
 $gutter-6x: $gutter * 6;
 
-$entry-width: 340px;
-$entry-height: 200px;
+$entry-width: 242px;
+$entry-height: 196px;
 
 $ticker-width: $entry-width * 2 + $gutter;
 $ticker-height: 55px;
@@ -26,13 +67,13 @@ $my-orders-width: $depths-width;
 $my-orders-height: 92px;
 
 $order-book-width: $depths-width;
-$order-book-height: $min-height - $navbar-height - $entry-height - $ticker-height - $depths-height - $my-orders-height - $gutter-6x;
+$order-book-height: $min-height - $navbar-height - $entry-height - $ticker-height - $depths-height - $my-orders-height - $gutter-6x - 2 * $cover-maring;
 
 $market-list-width: 280px;
 $market-list-height: $entry-height;
 
 $market-trades-width: $market-list-width;
-$market-trades-height: $min-height - $navbar-height - $market-list-height - $gutter-3x;
+$market-trades-height: $min-height - $navbar-height - $market-list-height - $gutter-3x - $cover-maring * 2;
 
-$candlestick-width: $min-width - $order-book-width - $market-list-width - $gutter-4x - 20;
-$candlestick-height: $min-height - $navbar-height - $gutter-2x;
+$candlestick-width: $min-width - $order-book-width - $market-list-width - $gutter-4x - $cover-maring * 2;
+$candlestick-height: $min-height - $navbar-height - $gutter-2x - $cover-maring * 2;

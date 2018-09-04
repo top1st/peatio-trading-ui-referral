@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <ul id="menu" class="nav navbar-nav navbar-left">
       <a class="navbar-brand" href="/">
-        <%= ENV.fetch('TITLE') %>
+        <img class="nav-img" src="<%= ENV['LOGO_URL'] || image_path('logo.png') %>">
         <%= @data.fetch(:current_market).fetch(:ask_unit).upcase %>/<%= @data.fetch(:current_market).fetch(:bid_unit).upcase %>
       </a>
 

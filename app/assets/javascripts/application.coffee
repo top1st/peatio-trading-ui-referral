@@ -30,7 +30,12 @@
 #= require_tree ./component_ui
 #= require_tree ./templates
 
+#= require datafeeds/udf/dist/bundle.js
+#= require datafeeds/udf/dist/polyfills.js
+#= require charting_library/charting_library.min.js
+
 #= require_self
+#= require ./tv-chart-widget-init.js
 
 $ ->
   window.notifier = new Notifier()

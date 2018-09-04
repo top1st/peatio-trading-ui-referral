@@ -2,6 +2,7 @@ GUTTER = 2 # linkage to market.css.scss $gutter var
 PANEL_TABLE_HEADER_HIGH = 37
 PANEL_PADDING = 8
 BORDER_WIDTH = 1
+COVER_MARGIN = 40
 
 @AutoWindowUI = flight.component ->
   @after 'initialize', ->
@@ -15,6 +16,7 @@ BORDER_WIDTH = 1
     gutter_8x = GUTTER * 8
     gutter_9x = GUTTER * 9
     panel_table_header_high = PANEL_TABLE_HEADER_HIGH
+    cover_margin = COVER_MARGIN
 
     @$node.resize ->
       navbar_h       = $('.navbar').height() + BORDER_WIDTH
@@ -29,7 +31,8 @@ BORDER_WIDTH = 1
       window_h = $(@).height()
       $('.content').height(window_h - navbar_h)
 
-      $('#candlestick').height(window_h - navbar_h - gutter_3x)
+#      $('#candlestick').height(window_h - navbar_h - gutter_3x)
+      $('#candlestick').height(window_h - navbar_h - gutter_4x - 3*cover_margin + 25)
 
       order_h = window_h - navbar_h - entry_h - depths_h - my_orders_h - ticker_h - gutter_6x - 2*BORDER_WIDTH
       $('#order_book').height(order_h)
@@ -44,6 +47,6 @@ BORDER_WIDTH = 1
       window_w     = window.innerWidth
       markets_w    = $('#market_list').width()
       order_book_w = $('#order_book').width()
-      $('#candlestick').width(window_w - order_book_w - markets_w - gutter_4x - 20)
-
+#      $('#candlestick').width(window_w - order_book_w - markets_w - gutter_4x - 20)
+      $('#candlestick').width(window_w - order_book_w - markets_w - gutter_4x - 3*cover_margin + 6)
     @$node.resize()
