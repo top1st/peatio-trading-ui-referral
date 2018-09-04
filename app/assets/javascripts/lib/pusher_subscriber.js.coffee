@@ -92,4 +92,5 @@ class DepositAddressHandler extends EventHandler
     $.publish "deposit_address:create", attributes['deposit_address']
 
 
-window.PusherSubscriber = PusherSubscriber
+if gon.user
+  window.PusherSubscriber = new PusherSubscriber()

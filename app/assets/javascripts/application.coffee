@@ -35,7 +35,7 @@
 #= require charting_library/charting_library.min.js
 
 #= require_self
-#= require ./tv-chart-widget-init.js
+# require ./tv-chart-widget-init.js
 
 $ ->
   window.notifier = new Notifier()

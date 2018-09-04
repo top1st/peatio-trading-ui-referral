@@ -3,6 +3,8 @@
     return if not gon.user
     channel = @attr.pusher.subscribe("private-#{gon.user.sn}")
 
+    console.log('Private Channel connected successfully')
+
     channel.bind 'account', (data) =>
       gon.accounts[data.currency.code] = data
       @trigger 'account::update', gon.accounts
