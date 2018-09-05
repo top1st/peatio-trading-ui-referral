@@ -34,11 +34,11 @@ COVER_MARGIN = 40
 #      $('#candlestick').height(window_h - navbar_h - gutter_3x)
       $('#candlestick').height(window_h - navbar_h - gutter_4x - 3*cover_margin + 25)
 
-      order_h = window_h - navbar_h - entry_h - depths_h - my_orders_h - ticker_h - gutter_6x - 2*BORDER_WIDTH
+      order_h = window_h - navbar_h - entry_h - depths_h - my_orders_h - ticker_h - gutter_6x - 2*BORDER_WIDTH - 3*cover_margin - 5
       $('#order_book').height(order_h)
       $('#order_book .panel-body-content').height(order_h - panel_table_header_high - 2*PANEL_PADDING)
 
-      trades_h = window_h - navbar_h - markets_h - gutter_3x - BORDER_WIDTH
+      trades_h = window_h - navbar_h - markets_h - gutter_3x - BORDER_WIDTH - 2*cover_margin - 20
       $('#market_trades').height(trades_h)
       $('#market_trades .panel').height(trades_h - 2*BORDER_WIDTH)
       $('#market_trades .panel-body-content').height(trades_h - 2*BORDER_WIDTH - panel_table_header_high - 2*PANEL_PADDING)
