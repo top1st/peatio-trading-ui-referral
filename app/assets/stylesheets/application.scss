@@ -1390,4 +1390,29 @@ table {
   border-radius: 10px;
 }
 
+.ask_active_market{
+  background-color: rgba(208, 0, 23, 0.9);
+  padding: 2px;
+  border-radius: 3px;
+  color: white;
+}
+
+.bid_active_market{
+  background-color: rgba(77, 215, 16, 0.9);
+  padding: 2px;
+  border-radius: 3px;
+  color: white;
+}
+
+#ask_market:hover, #bid_market:hover, #ask_limit:hover, #bid_limit:hover{
+  cursor: pointer;
+}
+
+#order_asks, #order_bids{
+  display: none;
+}
+
+.input-price-container {
+  height: 33px;
+}
 

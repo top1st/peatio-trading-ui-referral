@@ -1,3 +1,5 @@
+<div id="#order_asks"></div>
+<div id="#order_bids"></div>
 <audio preload="preload" id="success-fx">
   <source src="<%= audio_path('success.mp3') %>" />
 </audio>
@@ -19,8 +21,8 @@
       <%= render partial: 'order_book' %>
       <%= render partial: 'depths' %>
       <%= render partial: 'ticker' %>
-      <%= render partial: 'ask_entry', locals: { market: @data.fetch(:current_market) } %>
-      <%= render partial: 'bid_entry', locals: { market: @data.fetch(:current_market) } %>
+      <%= render partial: 'ask_entry', locals: { market: @data.fetch(:current_market), order: @data.fetch(:order_ask) } %>
+      <%= render partial: 'bid_entry', locals: { market: @data.fetch(:current_market), order: @data.fetch(:order_bid) } %>
       <%= render partial: 'my_orders' %>
     </div>
 

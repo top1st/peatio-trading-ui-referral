@@ -1,12 +1,22 @@
 <div id="ask_entry" class="panel panel-default entry-left">
   <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-6">
+        <span class="ask_active_market" id="ask_market">Market</span>
+      </div>
+      <div class="col-xs-6">
+        <span id="ask_limit">Limit</span>
+      </div>
+    </div>
     <%= form_for 'order_ask', url: "/markets/#{market.fetch(:id)}/order_asks", remote: true, html: { class: 'new_order_ask', id: 'new_order_ask' } do |f| %>
-      <%= f.hidden_field :ord_type, value: 'limit' %>
-      <div class="input-group price">
-        <label class="input-group-addon"><%= t('.price') %></label>
-        <span class="label label-primary hint-price-disadvantage"></span>
-        <%= f.text_field :price, class: 'form-control' %>
-        <span class="input-group-addon"><%= market.fetch(:bid_unit).upcase %></span>
+      <%= f.hidden_field :ord_type, value: order.fetch(:ord_type) %>
+      <div class="input-price-container">
+        <div class="input-group price" id="ask_price">
+          <label class="input-group-addon"><%= t('.price') %></label>
+          <span class="label label-primary hint-price-disadvantage"></span>
+          <%= f.text_field :price, class: 'form-control' %>
+          <span class="input-group-addon"><%= market.fetch(:bid_unit).upcase %></span>
+        </div>
       </div>
       <div class="input-group amount">
         <label class="input-group-addon"><%= t('.amount') %></label>
